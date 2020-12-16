@@ -17,6 +17,8 @@ class DateFormatter
      */
     public static function formatFromTimestamp($timestamp) : String
     {
-        return Carbon::createFromTimestamp($timestamp)->format('d/m/Y - H:i:s');
+        $date = Carbon::createFromTimestamp($timestamp);
+        $date->sub('hour', 3);
+        return $date->format('d/m/Y - H:i:s');
     }
 }
