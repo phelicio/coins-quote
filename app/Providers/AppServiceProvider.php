@@ -25,10 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive('formatDate', function ($expression) {
-            dd($expression);
-            $date = DateFormatter::formatFromTimestamp($expression);
-            return "<?php echo \"$date\"; ?>";
-        });
+
     }
 }
