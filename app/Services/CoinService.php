@@ -16,6 +16,13 @@ class CoinService
         return $coins;
     }
     
+    public function getCoin(String $coin, int $days) : array
+    {
+        $response = Http::get("{$this->url}/{$coin}/{$days}");
+        $coins = $this->getData($response, "coins/{$coin}");
+        return $coins;
+    }
+
     /**
      * getData
      *
