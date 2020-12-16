@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [CoinController::class, 'index']);
-Route::get('/', [CoinController::class, 'show']);
+Route::get('/{coin}', [CoinController::class, 'show']);
