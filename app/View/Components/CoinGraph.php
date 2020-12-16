@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class CoinGraph extends Component
 {
+    public $coin;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($coin)
     {
-        //
+        $this->coin = $coin;
     }
 
     /**

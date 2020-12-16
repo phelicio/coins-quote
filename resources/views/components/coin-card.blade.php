@@ -1,11 +1,10 @@
-<div 
-class="w-3/4 sm:w-2/3 col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4  xl:col-span-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"  
-onClick="openModal()"
->
+    <div 
+    class="w-3/4 sm:w-2/3 col-span-12 sm:col-span-4 md:col-span-4 lg:col-span-4  xl:col-span-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"  
+    >
     <div class="max-w-sm bg-white rounded shadow-md">
         <div class="px-4 py-4">
             <div>
-                <a href="#" class="font-semibold leading-tight text-2xl text-gray-800 hover:text-gray-800">
+                <a href="{{  url("/{$coin['code']}-{$coin['codein']}")  }}" class="font-semibold leading-tight text-2xl text-gray-800 hover:text-gray-800">
                     {{ $coin['name'] }}
                 </a>
             </div>

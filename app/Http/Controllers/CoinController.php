@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Services\CoinService;
 use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\Request;
 
 class CoinController extends Controller
 {    
@@ -34,9 +35,10 @@ class CoinController extends Controller
      *
      * @return Illuminate\View\View
      */
-    public function show(String $coin) : View
+    public function show(Request $request, String $coin) : View
     {
-        $coinData = $this->service->getCoin($coin);
-        return view('home', ['coin' => $coinData]);
+        $days = $request->query('days')?? 15;
+        $coinData = $this->service->getCoin($coin, $days);
+        return view('show-coin', ['coin' => $coinData]);
     }
 }
